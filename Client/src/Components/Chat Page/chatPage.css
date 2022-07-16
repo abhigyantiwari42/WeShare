@@ -1,0 +1,279 @@
+#chatPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1a1d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#mainChatWindow {
+  color: black;
+  width: 70%;
+  height: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#members {
+  width: 28%;
+  height: 100%;
+}
+
+#members #actionButtons {
+  background-color: tomato;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#members #actionButtons button {
+  border-radius: 20px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+  font-size: 1rem;
+}
+
+#members #actionButtons button p {
+  margin-left: 8px;
+}
+
+#chatHere {
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 70%;
+  height: 100%;
+  background-color: white;
+}
+
+#chatHere .form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#chatHere .form #mainTyping {
+  box-sizing: border-box;
+  width: 92%;
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+  padding: 8px 15px;
+  margin: 0px;
+  outline: none;
+  border-radius: 30px;
+  background-color: rgb(235, 235, 235);
+  border: 1px solid black;
+}
+
+#chatHere .form #mainTyping:focus {
+  border-bottom: 2px solid black;
+}
+
+#chatHere .form button {
+  box-sizing: border-box;
+  width: 8%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  background-image: none;
+  background-color: whitesmoke;
+}
+
+#members #actionButtons {
+  display: none;
+}
+
+#chatHere .form button img {
+  margin: 0px;
+}
+
+#actionButtons {
+  background-color: tomato;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  display: none;
+}
+
+#actionButtons button {
+  border-radius: 20px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+  font-size: 1rem;
+}
+
+#actionButtons button p {
+  margin-left: 8px;
+}
+
+@media only screen and (max-width: 1130px) {
+  #mainChatWindow {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #chatPage h1 {
+    display: none;
+  }
+
+  #mainChatWindow {
+    width: 100%;
+    height: 100%;
+  }
+
+  #members {
+    position: fixed;
+    left: -51%;
+    z-index: 2;
+    width: 50%;
+    display: none;
+    animation: slideIn 0.5s ease-out 1 0s forwards;
+    transition: all 0.5s ease-out 0s;
+    animation-play-state: paused;
+  }
+
+  #members #actionButtons button {
+    border-radius: 8px;
+    width: 100px;
+    padding: 3px 5px;
+  }
+
+  #members #actionButtons button img {
+    width: 30px;
+    height: 25px;
+    filter: contrast(0%);
+  }
+
+  #members #actionButtons #modes button {
+    width: 40px;
+    height: 40px;
+    padding: 2px 2px;
+  }
+
+  #members #actionButtons #modes button img {
+    filter: contrast(200%) brightness(0%);
+    width: 35px;
+    height: 35px;
+  }
+
+  #members #actionButtons #modes #lightMode {
+    display: none;
+  }
+
+  #members #actionButtons button p {
+    display: block;
+  }
+
+  @keyframes slideIn {
+    100% {
+      left: 0%;
+    }
+  }
+
+  @keyframes slideOut {
+    100% {
+      left: -51%;
+    }
+  }
+
+  #chatHere {
+    width: 100vw;
+    height: 100vh;
+    border: 0px;
+    border-radius: 0px;
+  }
+
+  #actionButtons,
+  #members #actionButtons {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #chatHere .form #mainTyping {
+    line-height: 1.2rem;
+    font-size: 1rem;
+    padding: 8px 10px;
+    width: 88%;
+  }
+
+  #chatHere .form button img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #chatHere .form button {
+    width: 12%;
+  }
+
+  #members {
+    width: 100%;
+  }
+
+  #actionButtons button {
+    width: 40px;
+    border-radius: 8px;
+    background-color: whitesmoke;
+  }
+
+  #actionButtons button p {
+    display: none;
+  }
+
+  #members #actionButtons button {
+    border-radius: 8px;
+    width: 100px;
+    padding: 3px 5px;
+  }
+
+  #members #actionButtons button img {
+    width: 30px;
+    height: 25px;
+    filter: contrast(0%);
+  }
+
+  #members #actionButtons #modes button {
+    width: 40px;
+    height: 40px;
+    padding: 2px 2px;
+  }
+
+  #members #actionButtons #modes button img {
+    filter: contrast(200%) brightness(0%);
+    width: 35px;
+    height: 35px;
+  }
+
+  #members #actionButtons #modes #lightMode {
+    display: none;
+  }
+
+  #members #actionButtons button p {
+    display: block;
+  }
+}

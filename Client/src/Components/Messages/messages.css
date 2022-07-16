@@ -1,0 +1,19 @@
+.messageContainer {
+  height: 83%;
+  overflow: auto;
+  flex: auto;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  .messageContainer {
+    height: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .messageContainer {
+    height: 80%;
+  }
+}

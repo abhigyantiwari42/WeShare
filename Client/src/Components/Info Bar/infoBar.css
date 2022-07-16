@@ -1,0 +1,53 @@
+#infoBar {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: rgb(208, 208, 208);
+}
+
+#infoBar img {
+  width: 30px;
+  height: 30px;
+  filter: contrast(200%);
+  margin: auto;
+}
+
+#info,
+#mobileActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#mobileActions {
+  display: none;
+}
+
+#mobileActions span img {
+  width: 40px;
+  height: 40px;
+}
+
+#mobileActions span {
+  margin: 0px 10px;
+}
+
+#info h2 {
+  margin-left: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  #mobileActions {
+    display: flex;
+  }
+
+  #closeBtn {
+    display: none;
+  }
+}
